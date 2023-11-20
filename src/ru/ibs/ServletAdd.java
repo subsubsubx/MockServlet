@@ -18,7 +18,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 @WebServlet(urlPatterns = "/add")
 public class ServletAdd extends HttpServlet {
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
-    private final AtomicInteger counter = new AtomicInteger(4);
+    private final AtomicInteger counter = new AtomicInteger(6);
     private final Model model = Model.getInstance();
 
 /*    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
