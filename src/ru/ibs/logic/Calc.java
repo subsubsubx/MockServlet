@@ -54,7 +54,7 @@ public class Calc {
                 res = multiplication(a, b);
                 break;
             case "/":
-                if (!(b == 0)){
+                if (b != 0){
                     res = division(a, b);
                     break;
                } else throw new ArithmeticException();
