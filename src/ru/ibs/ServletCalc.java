@@ -34,8 +34,8 @@ public class ServletCalc extends HttpServlet {
             System.out.println("Error!");
         }
         JsonObject jsonObject = gson.fromJson(String.valueOf(jb), JsonObject.class);
-        int a = jsonObject.get("a").getAsInt();
-        int b = jsonObject.get("b").getAsInt();
+        double a = jsonObject.get("a").getAsInt();
+        double b = jsonObject.get("b").getAsInt();
         String op = jsonObject.get("math").getAsString();
         PrintWriter printWriter = response.getWriter();
 

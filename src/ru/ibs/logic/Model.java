@@ -17,6 +17,8 @@ public class Model implements Serializable {
         model.put(1, new User("Jakiro", "Main", 699.99));
         model.put(2, new User("Фыва", "Самарский", 1234));
         model.put(3, new User("Leroy", "Jenkins", 5678.91));
+        model.put(4, new User("Четвертый", "Пользователь", 5989));
+        model.put(5, new User("Пятый", "Юзер", 6785));
 
     }
 

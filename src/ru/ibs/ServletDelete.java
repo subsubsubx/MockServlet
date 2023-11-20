@@ -35,6 +35,7 @@ public class ServletDelete extends HttpServlet {
         } catch (Exception e) {
             System.out.println("Error!");
         }
+
         JsonObject jsonObject = gson.fromJson(String.valueOf(jb), JsonObject.class);
         int id = jsonObject.get("id").getAsInt();
 

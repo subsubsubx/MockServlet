@@ -99,7 +99,7 @@ public class ServletList extends HttpServlet {
             if (id == 0) {
                 printWriter.print(gson.toJson(model.getUserList()));
             } else if (id > 0) {
-                if (id > model.getUserList().size()) {
+                if (!model.getUserList().containsKey(id)) {
                     String res = "{\"error\" : \"Пользователь с id " + id + " не существует\"}";
                     printWriter.print(JsonParser.parseString(res).getAsJsonObject());
                 } else {

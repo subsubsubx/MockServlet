@@ -2,15 +2,13 @@ package ru.ibs.logic;
 
 public class Calc {
 
-    private int a;
-    private int b;
+    private double a;
+    private double b;
     private String op;
-    private int res;
+    private double res;
 
-    public Calc() {
-    }
 
-    public Calc(int a, int b, String op) {
+    public Calc(double a, double b, String op) {
         this.a = a;
         this.b = b;
         this.op = op;
@@ -18,13 +16,13 @@ public class Calc {
     }
 
 
-    public int division(int a, int b) {
+    private double division(double a, double b) {
         this.a = a;
         this.b = b;
             return a / b;
     }
 
-    public int multiplication(int a, int b) {
+    private double multiplication(double a, double b) {
         this.a = a;
         this.b = b;
         return a * b;
@@ -32,19 +30,19 @@ public class Calc {
     }
 
 
-    public int addition(int a, int b) {
+    private double addition(double a, double b) {
         this.a = a;
         this.b = b;
         return a + b;
     }
 
-    public int subtraction(int a, int b) {
+    private double subtraction(double a, double b) {
         this.a = a;
         this.b = b;
         return a - b;
     }
 
-    public int getRes() {
+    public double getRes() {
         switch (op) {
             case "+":
                 res = addition(a, b);
@@ -56,7 +54,10 @@ public class Calc {
                 res = multiplication(a, b);
                 break;
             case "/":
-                res = division(a, b);
+                if (!(b == 0)){
+                    res = division(a, b);
+                    break;
+               } else throw new ArithmeticException();
             default:
                 System.out.println("Error!");
                 break;
